@@ -80,7 +80,7 @@ export default async function AdminDashboard() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {orderTerbaru.map((o) => (
+            {orderTerbaru.map((o: typeof orderTerbaru[number]) => (
               <tr key={o.id} className="hover:bg-gray-50">
                 <td className="px-5 py-3">
                   <code className="text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
