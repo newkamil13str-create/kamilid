@@ -44,7 +44,7 @@ export default function OrderTable({ orders: initial }: { orders: Order[] }) {
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">
-          {orders.map((order) => (
+          {orders.map((order: typeof orders[number]) => (
             <tr key={order.id} className="hover:bg-gray-50">
               <td className="px-4 py-3">
                 <code className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">

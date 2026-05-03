@@ -5,7 +5,7 @@ import type { Produk } from '@/types'
 export default function ProductGrid({ produk }: { produk: Produk[] }) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-      {produk.map((p) => (
+      {produk.map((p: typeof produk[number]) => (
         <ProductCard key={p.id} produk={p} />
       ))}
     </div>

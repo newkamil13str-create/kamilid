@@ -28,7 +28,7 @@ export default function AdminSidebar() {
 
       {/* Menu */}
       <nav className="flex-1 p-4 space-y-1">
-        {menu.map((m) => {
+        {menu.map((m: typeof menu[number]) => {
           const active = path === m.href || (m.href !== '/admin' && path.startsWith(m.href))
           return (
             <Link
