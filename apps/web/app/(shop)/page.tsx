@@ -69,7 +69,7 @@ export default async function BerandaPage({
           >
             Semua
           </Link>
-          {kategoris.map((k) => (
+          {kategoris.map((k: typeof kategoris[number]) => (
             <Link
               key={k.kategori}
               href={`/?kategori=${k.kategori}`}

@@ -18,7 +18,7 @@ export default async function AdminPesananPage({
     _count: { status: true },
   })
 
-  const statusCount = Object.fromEntries(counts.map((c) => [c.status, c._count.status]))
+  const statusCount = Object.fromEntries(counts.map((c: typeof counts[number]) => [c.status, c._count.status]))
 
   const tabs = [
     { label: 'Semua', value: '', count: orders.length },
@@ -36,7 +36,7 @@ export default async function AdminPesananPage({
 
       {/* Tab filter */}
       <div className="flex gap-2 flex-wrap">
-        {tabs.map((t) => (
+        {tabs.map((t: typeof tabs[number]) => (
           <a
             key={t.value}
             href={t.value ? `?status=${t.value}` : '/admin/pesanan'}
