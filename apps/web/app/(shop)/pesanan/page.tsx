@@ -31,7 +31,7 @@ export default async function PesananPage() {
           </div>
         ) : (
           <div className="space-y-4">
-            {orders.map((order) => (
+            {orders.map((order: typeof orders[number]) => (
               <div key={order.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
                 <div className="flex items-start justify-between mb-3">
                   <div>
