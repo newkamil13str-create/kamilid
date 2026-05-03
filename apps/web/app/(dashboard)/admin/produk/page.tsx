@@ -35,7 +35,7 @@ export default async function AdminProdukPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {produk.map((p) => (
+            {produk.map((p: typeof produk[number]) => (
               <tr key={p.id} className="hover:bg-gray-50">
                 <td className="px-5 py-4">
                   <div className="flex items-center gap-3">

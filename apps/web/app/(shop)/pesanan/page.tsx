@@ -52,7 +52,7 @@ export default async function PesananPage() {
 
                 {/* Items preview */}
                 <div className="space-y-1 mb-3">
-                  {order.items.slice(0, 2).map((item) => (
+                  {order.items.slice(0, 2).map((item: typeof order.items[number]) => (
                     <div key={item.id} className="flex justify-between text-sm text-gray-600">
                       <span>{item.produk.nama} x{item.qty}</span>
                       <span>Rp {item.subtotal.toLocaleString('id-ID')}</span>

@@ -36,7 +36,7 @@ export default function CheckoutPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          items: items.map((i) => ({
+          items: items.map((i: import('@/store/cartStore').CartItem) => ({
             produkId: i.id,
             qty: i.qty,
             harga: i.harga,
@@ -207,7 +207,7 @@ export default function CheckoutPage() {
           {/* Ringkasan */}
           <div className="bg-white rounded-xl shadow-sm p-6">
             <h2 className="font-semibold text-gray-800 mb-4">Ringkasan Pesanan</h2>
-            {items.map((item) => (
+            {items.map((item: import('@/store/cartStore').CartItem) => (
               <div key={item.id} className="flex justify-between text-sm text-gray-600 mb-2">
                 <span>{item.nama} x{item.qty}</span>
                 <span>Rp {(item.harga * item.qty).toLocaleString('id-ID')}</span>

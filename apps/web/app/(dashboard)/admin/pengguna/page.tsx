@@ -25,7 +25,7 @@ export default async function AdminPenggunaPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {users.map((u) => (
+            {users.map((u: typeof users[number]) => (
               <tr key={u.id} className="hover:bg-gray-50">
                 <td className="px-5 py-4">
                   <div className="flex items-center gap-3">

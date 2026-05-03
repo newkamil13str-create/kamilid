@@ -73,7 +73,7 @@ export default async function DetailPesananPage({
         <div className="bg-white rounded-xl shadow-sm border p-5 mb-4">
           <h2 className="font-semibold text-gray-800 mb-4">Item Pesanan</h2>
           <div className="space-y-4">
-            {order.items.map((item) => (
+            {order.items.map((item: typeof order.items[number]) => (
               <div key={item.id} className="flex gap-4">
                 <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
                   {item.produk.gambar[0] ? (

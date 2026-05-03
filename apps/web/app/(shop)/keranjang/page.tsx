@@ -36,7 +36,7 @@ export default function KeranjangPage() {
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Daftar item */}
           <div className="lg:col-span-2 space-y-4">
-            {items.map((item) => (
+            {items.map((item: import('@/store/cartStore').CartItem) => (
               <div
                 key={item.id}
                 className="bg-white rounded-xl shadow-sm p-4 flex gap-4"
@@ -91,7 +91,7 @@ export default function KeranjangPage() {
           <div className="bg-white rounded-xl shadow-sm p-6 h-fit sticky top-4">
             <h3 className="font-bold text-gray-800 mb-4">Ringkasan Pesanan</h3>
             <div className="space-y-2 mb-4">
-              {items.map((item) => (
+              {items.map((item: import('@/store/cartStore').CartItem) => (
                 <div key={item.id} className="flex justify-between text-sm text-gray-600">
                   <span>{item.nama} x{item.qty}</span>
                   <span>Rp {(item.harga * item.qty).toLocaleString('id-ID')}</span>
