@@ -31,8 +31,8 @@ export default async function DetailPesananPage({
               <p className="text-xs text-gray-400 mb-1">Invoice</p>
               <code className="text-blue-600 font-mono text-sm">{order.invoiceId}</code>
             </div>
-            <span className={`px-3 py-1.5 rounded-full text-sm font-semibold ${ORDER_STATUS_COLOR[order.status]}`}>
-              {ORDER_STATUS_LABEL[order.status]}
+            <span className={`px-3 py-1.5 rounded-full text-sm font-semibold ${ORDER_STATUS_COLOR[order.status as keyof typeof ORDER_STATUS_COLOR]}`}>
+              {ORDER_STATUS_LABEL[order.status as keyof typeof ORDER_STATUS_LABEL]}
             </span>
           </div>
           <div className="grid grid-cols-2 gap-4 text-sm">

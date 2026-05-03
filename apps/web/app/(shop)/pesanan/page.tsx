@@ -45,8 +45,8 @@ export default async function PesananPage() {
                       })}
                     </p>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${ORDER_STATUS_COLOR[order.status]}`}>
-                    {ORDER_STATUS_LABEL[order.status]}
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${ORDER_STATUS_COLOR[order.status as keyof typeof ORDER_STATUS_COLOR]}`}>
+                    {ORDER_STATUS_LABEL[order.status as keyof typeof ORDER_STATUS_LABEL]}
                   </span>
                 </div>
 
